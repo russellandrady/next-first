@@ -5,15 +5,15 @@ import { cn } from "@/lib/utils"
 import { Checkbox } from "@/components/ui/checkbox"
 
 interface Todo {
-  id: number
-  text: string
+  id: string
+  title: string
   completed: boolean
 }
 
 interface TodoItemProps {
   todo: Todo
-  onToggle: (id: number) => void
-  onDelete: (id: number) => void
+  onToggle: (id: string) => void
+  onDelete: (id: string) => void
 }
 
 export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
@@ -24,7 +24,7 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
         onCheckedChange={() => onToggle(todo.id)}
         className="h-5 w-5 border-none rounded-lg hover:bg-primary/80 transition-colors bg-primary text-primary-foreground data-[state=checked]:bg-primary data-[state=checked]:text-content-light"
       />
-      <span className={cn("flex-1 text-lg", todo.completed && "line-through text-text-secondary-light")}>{todo.text}</span>
+      <span className={cn("flex-1 text-lg", todo.completed && "line-through text-text-secondary-light")}>{todo.title}</span>
       <button
         onClick={() => onDelete(todo.id)}
         className="h-8 w-8 p-0 rounded hover:text-primary/80 transition-colors flex items-center justify-center"
