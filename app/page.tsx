@@ -1,4 +1,5 @@
 "use client";
+import { MainButton } from "@/components/MainButton";
 import { TodoItem } from "@/components/Todo";
 import { Input } from "@/components/ui/input";
 import { Plus, Search } from "lucide-react";
@@ -35,9 +36,10 @@ export default function Home() {
               placeholder="Add new tasks..."
               className="w-full text-sm bg-transparent outline-none"
             />
-            <button className="p-2 border-none rounded-lg hover:bg-primary/80 transition-colors bg-primary text-primary-foreground">
-              <Plus className="h-4 w-4 text-content-light" />
-            </button>
+            <MainButton
+              icon={<Plus className="h-4 w-4 text-content-light" />}
+              onClick={() => {}}
+            />
           </div>
           <hr className="border-border-light mx-2 mt-2" />
         </div>

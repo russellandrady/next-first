@@ -6,7 +6,7 @@
 :root {
 
   /* Custom colors from tailwind config */
-  --primary: oklch(0.205 0 0);
+  --primary: #FAC638;
   --background-light: #f8f8f5;
   --background-dark: #231e0f;
   --content-light: #ffffff;
