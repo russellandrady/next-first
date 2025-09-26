@@ -2,10 +2,13 @@
 import { MainButton } from "@/components/MainButton";
 import { TodoItem } from "@/components/Todo";
 import { Input } from "@/components/ui/input";
+import { trpc } from "@/server/client";
 import { Plus, Search } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
+  const getUsers = trpc.user.getUsers.useQuery();
+  console.log(getUsers.data);
   const initialTodos = [
   { id: 1, text: "This is an example of task #1", completed: true },
   { id: 2, text: "This is an example of task #2", completed: false },
