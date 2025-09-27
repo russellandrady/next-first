@@ -8,7 +8,7 @@ import { signIn, signOut } from "next-auth/react";
 
 export default function HeaderClient({ session }: { session: any }) {
   return (
-    <div className="flex items-center justify-end gap-2">
+    <>
       {session?.user ? (
         <>
           <Avatar>
@@ -40,6 +40,6 @@ export default function HeaderClient({ session }: { session: any }) {
           onClick={() => signIn("github")}
         />
       )}
-    </div>
+    </>
   );
 }

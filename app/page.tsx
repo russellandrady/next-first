@@ -52,7 +52,7 @@ export default function Home() {
     : tasks;
 
   return (
-    <div className="grid grid-rows-[auto_auto_1fr] gap-4 py-4 px-3 h-full min-h-[calc(100vh-8rem)] ">
+    <div className="grid grid-rows-[auto_auto_1fr] gap-4 py-4 px-2 h-full min-h-[calc(100vh-8rem)] ">
       <div className="grid grid-cols-1">
         <div className="w-full">
           <div className="grid grid-cols-[auto_1fr] items-center gap-2 mx-2">
